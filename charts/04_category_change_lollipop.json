@@ -1,0 +1,135 @@
+{
+  "width": "container",
+  "height": 380,
+  "data": {
+    "url": "../data/current_cpi_categories.csv"
+  },
+  "params": [
+    {
+      "name": "minAnnual04",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": -5,
+        "max": 10,
+        "step": 0.5,
+        "name": "Minimum annual movement: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.annual_pct >= minAnnual04"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 2,
+        "color": "#94a3b8"
+      },
+      "encoding": {
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null
+        },
+        "x": {
+          "field": "monthly_pct",
+          "type": "quantitative",
+          "title": "Movement (%)"
+        },
+        "x2": {
+          "field": "annual_pct"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 90,
+        "color": "#8ecae6"
+      },
+      "encoding": {
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "x": {
+          "field": "monthly_pct",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "category"
+          },
+          {
+            "field": "monthly_pct",
+            "title": "Monthly (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "annual_pct",
+            "title": "Annual (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 110,
+        "color": "#fb8500"
+      },
+      "encoding": {
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "x": {
+          "field": "annual_pct",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "category"
+          },
+          {
+            "field": "annual_pct",
+            "title": "Annual (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "monthly_pct",
+            "title": "Monthly (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    }
+  ],
+  "title": {
+    "text": "Which CPI Categories Are Pressuring Households Now?",
+    "subtitle": "Blue = monthly movement; orange = annual movement; use slider to filter categories",
+    "anchor": "start"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    }
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json"
+}

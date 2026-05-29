@@ -1,0 +1,125 @@
+{
+  "width": "container",
+  "height": 360,
+  "data": {
+    "url": "../data/monthly_essential_inflation.csv"
+  },
+  "params": [
+    {
+      "name": "seriesSelect09",
+      "value": "Rents",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Rents",
+          "Automotive fuel",
+          "Electricity"
+        ],
+        "name": "Series: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.series == seriesSelect09"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "opacity": 0.55
+      },
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "title": "Date"
+        },
+        "y": {
+          "field": "monthly_pct",
+          "type": "quantitative",
+          "title": "Monthly movement (%)"
+        },
+        "color": {
+          "value": "#8ecae6"
+        },
+        "tooltip": [
+          {
+            "field": "date",
+            "type": "temporal"
+          },
+          {
+            "field": "series"
+          },
+          {
+            "field": "monthly_pct",
+            "title": "Monthly (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "annual_pct",
+            "title": "Annual (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3,
+        "color": "#d95d39"
+      },
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "annual_pct",
+          "type": "quantitative",
+          "title": "Annual movement (%)"
+        },
+        "tooltip": [
+          {
+            "field": "date",
+            "type": "temporal"
+          },
+          {
+            "field": "series"
+          },
+          {
+            "field": "annual_pct",
+            "title": "Annual (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "y": "independent"
+    }
+  },
+  "title": {
+    "text": "Monthly Essential Inflation Explorer",
+    "subtitle": "Bars show monthly movement; line shows annual movement. Select rents, fuel or electricity",
+    "anchor": "start"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    }
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json"
+}

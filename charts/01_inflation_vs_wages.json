@@ -1,0 +1,106 @@
+{
+  "width": "container",
+  "height": 380,
+  "data": {
+    "url": "../data/inflation_wages_essentials.csv"
+  },
+  "params": [
+    {
+      "name": "seriesPick01",
+      "select": {
+        "type": "point",
+        "fields": [
+          "series"
+        ]
+      },
+      "bind": "legend"
+    },
+    {
+      "name": "dateHover01",
+      "select": {
+        "type": "point",
+        "fields": [
+          "date"
+        ],
+        "nearest": true,
+        "on": "mouseover",
+        "clear": "mouseout"
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": {
+        "param": "seriesPick01"
+      }
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "point": {
+      "filled": true,
+      "size": 50
+    },
+    "strokeWidth": 3
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": "Date"
+    },
+    "y": {
+      "field": "annual_pct",
+      "type": "quantitative",
+      "title": "Annual movement (%)"
+    },
+    "color": {
+      "field": "series",
+      "type": "nominal",
+      "title": "Series"
+    },
+    "opacity": {
+      "condition": {
+        "param": "dateHover01",
+        "value": 1
+      },
+      "value": 0.72
+    },
+    "tooltip": [
+      {
+        "field": "date",
+        "type": "temporal",
+        "title": "Date"
+      },
+      {
+        "field": "series",
+        "type": "nominal"
+      },
+      {
+        "field": "annual_pct",
+        "type": "quantitative",
+        "title": "Annual movement (%)",
+        "format": ".1f"
+      }
+    ]
+  },
+  "title": {
+    "text": "Wages Compared with Essential Price Pressures",
+    "subtitle": "Annual movement for wages, rents, fuel and electricity; use legend to filter",
+    "anchor": "start"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    }
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json"
+}

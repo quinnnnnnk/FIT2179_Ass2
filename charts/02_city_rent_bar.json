@@ -1,0 +1,112 @@
+{
+  "width": "container",
+  "height": 340,
+  "data": {
+    "url": "../data/capital_city_cpi_pressure.csv"
+  },
+  "params": [
+    {
+      "name": "metric02",
+      "value": "all_groups_pct",
+      "bind": {
+        "input": "select",
+        "options": [
+          "all_groups_pct",
+          "housing_pct",
+          "food_pct",
+          "transport_pct",
+          "pressure_score"
+        ],
+        "labels": [
+          "All groups CPI",
+          "Housing CPI group",
+          "Food CPI group",
+          "Transport CPI group",
+          "Composite pressure score"
+        ],
+        "name": "Measure: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "datum[metric02]",
+      "as": "selected_value"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 6
+  },
+  "encoding": {
+    "y": {
+      "field": "city",
+      "type": "nominal",
+      "sort": "-x",
+      "title": null
+    },
+    "x": {
+      "field": "selected_value",
+      "type": "quantitative",
+      "title": "Annual movement / pressure score (%)"
+    },
+    "color": {
+      "field": "selected_value",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "tealblues"
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "field": "city",
+        "title": "Capital city"
+      },
+      {
+        "field": "all_groups_pct",
+        "title": "All groups CPI (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "housing_pct",
+        "title": "Housing CPI group (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "food_pct",
+        "title": "Food CPI group (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "transport_pct",
+        "title": "Transport CPI group (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "pressure_score",
+        "title": "Composite score",
+        "format": ".1f"
+      }
+    ]
+  },
+  "title": {
+    "text": "Capital City Cost Pressure Ranking",
+    "subtitle": "Switch the measure to compare all-groups inflation, housing, food, transport or composite pressure",
+    "anchor": "start"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    }
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json"
+}

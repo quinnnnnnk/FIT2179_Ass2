@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Australia's Cost of Living Crisis</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <nav class="top-nav" aria-label="Page navigation">
+    <a href="#intro">Overview</a>
+    <a href="#prices">Price shock</a>
+    <a href="#places">Place pressure</a>
+    <a href="#budgets">Budget squeeze</a>
+    <a href="#audit">Academic audit</a>
+  </nav>
+
+  <header class="hero" id="intro">
+    <div class="hero-tag">FIT2179 Data Visualisation 2 · Vega-Lite narrative</div>
+    <h1>Australia's Cost of Living Crisis</h1>
+    <p class="hero-copy">An academic-aesthetic visual story about how inflation, rent, groceries, transport and interest-rate pressure reshape everyday affordability across Australia.</p>
+    <div class="hero-controls">
+      <button id="toggleTheme" type="button">Switch focus mode</button>
+      <a href="#prices">Start reading ↓</a>
+    </div>
+    <div class="hero-stats">
+      <div><span>10</span><p>Vega-Lite visualisations</p></div>
+      <div><span>7+</span><p>interactive reading tools</p></div>
+      <div><span>1</span><p>Australia-focused map</p></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="chapter reveal" id="prices">
+      <div class="chapter-label">Chapter 01 · Price shock</div>
+      <h2>Prices rose faster than household breathing room</h2>
+      <p>The story begins with the affordability gap: prices can move quickly, while wages and household budgets adjust more slowly.</p>
+    </section>
+
+    <section class="feature-grid reveal">
+      <article class="chart-card hero-chart">
+        <div class="card-kicker">Chart 01 · Interactive line chart</div>
+        <div id="chart1" class="vis"></div>
+      </article>
+      <aside class="story-card navy">
+        <h3>The affordability gap</h3>
+        <p>Use the legend to isolate inflation or wage growth. The main message is not simply that prices rose, but that household income did not fully absorb the peak-pressure years.</p>
+        <p class="interaction-note">Legend filter · hover tooltip · nearest-year guide</p>
+      </aside>
+    </section>
+
+    <section class="double-grid reveal">
+      <article class="chart-card">
+        <div class="card-kicker">Chart 05 · Essential price heatmap</div>
+        <div id="chart5" class="vis"></div>
+      </article>
+      <article class="chart-card">
+        <div class="card-kicker">Chart 09 · Monthly inflation selector</div>
+        <div id="chart9" class="vis"></div>
+      </article>
+    </section>
+
+    <section class="chapter reveal" id="places">
+      <div class="chapter-label">Chapter 02 · Place pressure</div>
+      <h2>The crisis is national, but it is not felt equally</h2>
+      <p>City-level views show why national averages can hide important differences in rent, groceries and student living costs.</p>
+    </section>
+
+    <section class="feature-grid reverse reveal">
+      <aside class="story-card cream">
+        <h3>Reading the map</h3>
+        <p>The map uses proportional city symbols. Larger circles show higher composite CPI pressure, while colour shows all-groups annual CPI movement. Hover each capital city to compare details.</p>
+        <p class="interaction-note">Map projection · hover tooltip · size and colour encoding</p>
+      </aside>
+      <article class="chart-card hero-chart">
+        <div class="card-kicker">Chart 03 · Geographic map</div>
+        <div id="chart3" class="vis"></div>
+      </article>
+    </section>
+
+    <section class="double-grid reveal">
+      <article class="chart-card">
+        <div class="card-kicker">Chart 02 · Capital city CPI ranking</div>
+        <div id="chart2" class="vis"></div>
+      </article>
+      <article class="chart-card">
+        <div class="card-kicker">Chart 08 · City burden scatterplot</div>
+        <div id="chart8" class="vis"></div>
+      </article>
+    </section>
+
+    <section class="chapter reveal" id="budgets">
+      <div class="chapter-label">Chapter 03 · Budget squeeze</div>
+      <h2>Essentials leave less room for choice</h2>
+      <p>When essentials dominate weekly spending, households have less room for saving, leisure, emergencies and study-related costs.</p>
+    </section>
+
+    <section class="double-grid reveal">
+      <article class="chart-card">
+        <div class="card-kicker">Chart 04 · Before-and-after category comparison</div>
+        <div id="chart4" class="vis"></div>
+      </article>
+      <article class="chart-card">
+        <div class="card-kicker">Chart 06 · Household spending momentum</div>
+        <div id="chart6" class="vis"></div>
+      </article>
+    </section>
+
+    <section class="double-grid reveal">
+      <article class="chart-card">
+        <div class="card-kicker">Chart 07 · Rent and interest rate pressure</div>
+        <div id="chart7" class="vis"></div>
+      </article>
+      <article class="chart-card">
+        <div class="card-kicker">Chart 10 · Capital city pressure filter</div>
+        <div id="chart10" class="vis"></div>
+      </article>
+    </section>
+
+    <section class="audit reveal" id="audit">
+      <div class="audit-header">
+        <div>
+          <div class="chapter-label">Academic audit</div>
+          <h2>Detailed methodology & design rationale</h2>
+        </div>
+        <p>Each audit row includes a chart preview, source plan and concise What / Why / How rationale. Click each row to expand or collapse it.</p>
+      </div>
+
+      <div class="audit-list">
+        <details open>
+          <summary><span>01</span> Inflation–Wage Gap: dual-series line comparison</summary>
+          <div class="audit-body with-chart">
+            <div class="audit-mini"><div id="audit1"></div></div>
+            <div><h4>Thinking process</h4><p><b>What:</b> annual inflation and wage growth. <b>Why:</b> compare price pressure with income adjustment. <b>How:</b> line marks use x-position for year, y-position for annual change and colour for series.</p></div>
+            <div><h4>Interaction & source</h4><p>Legend filtering and hover tooltips reduce text clutter. Uses ABS Wage Price Index, ABS CPI component series and supporting essential price series.</p></div>
+          </div>
+        </details>
+        <details>
+          <summary><span>02</span> Capital City Rent Ranking: sorted bar chart</summary>
+          <div class="audit-body with-chart"><div class="audit-mini"><div id="audit2"></div></div><div><h4>Thinking process</h4><p><b>What:</b> capital-city CPI category movement. <b>Why:</b> identify where current cost pressure is highest across capital cities. <b>How:</b> bars compare capital cities against the selected CPI pressure measure.</p></div><div><h4>Interaction & source</h4><p>A dropdown lets users switch between all-groups, housing, food, transport and composite pressure measures.</p></div></div>
+        </details>
+        <details>
+          <summary><span>03</span> Cost Geography: Australia proportional-symbol map</summary>
+          <div class="audit-body with-chart"><div class="audit-mini"><div id="audit3"></div></div><div><h4>Thinking process</h4><p><b>What:</b> capital city coordinates and CPI pressure measures. <b>Why:</b> show spatial differences. <b>How:</b> map projection plus circle size and colour.</p></div><div><h4>Interaction & source</h4><p>Hover reveals exact city details without over-labelling the map. This satisfies the required geographic map component.</p></div></div>
+        </details>
+        <details>
+          <summary><span>04</span> Essential Categories: before-and-after lollipop chart</summary>
+          <div class="audit-body with-chart"><div class="audit-mini"><div id="audit4"></div></div><div><h4>Thinking process</h4><p><b>What:</b> monthly and annual CPI movement by category. <b>Why:</b> show which categories are currently creating pressure. <b>How:</b> paired dots compare monthly versus annual movement.</p></div><div><h4>Interaction & source</h4><p>The slider filters smaller increases so the reader can focus on the most important pressure points.</p></div></div>
+        </details>
+        <details>
+          <summary><span>05</span> Essential Price Heatmap: intensity over time</summary>
+          <div class="audit-body with-chart"><div class="audit-mini"><div id="audit5"></div></div><div><h4>Thinking process</h4><p><b>What:</b> annual CPI movement by category and city. <b>Why:</b> show how category pressure differs between cities. <b>How:</b> colour intensity encodes the index across a time-category matrix.</p></div><div><h4>Interaction & source</h4><p>A dropdown focuses one category at a time, keeping the matrix readable.</p></div></div>
+        </details>
+        <details>
+          <summary><span>06</span> Student Budget Composition: donut chart</summary>
+          <div class="audit-body with-chart"><div class="audit-mini"><div id="audit6"></div></div><div><h4>Thinking process</h4><p><b>What:</b> monthly household spending movement by category. <b>Why:</b> show where household spending rose in the latest month. <b>How:</b> arc marks show the distribution of positive spending movements.</p></div><div><h4>Interaction & source</h4><p>Legend highlighting and tooltips provide exact values while keeping the chart visually tidy.</p></div></div>
+        </details>
+        <details>
+          <summary><span>07</span> Rent Index and Interest Rate: layered time-series</summary>
+          <div class="audit-body with-chart"><div class="audit-mini"><div id="audit7"></div></div><div><h4>Thinking process</h4><p><b>What:</b> rent inflation and cash-rate movement. <b>Why:</b> add context to housing-related pressure. <b>How:</b> layered line series compare time-based trends.</p></div><div><h4>Interaction & source</h4><p>Interval brushing supports focused reading of specific periods. Final data should cite RBA and ABS sources.</p></div></div>
+        </details>
+        <details>
+          <summary><span>08</span> City Burden Scatterplot: rent, groceries and student cost</summary>
+          <div class="audit-body with-chart"><div class="audit-mini"><div id="audit8"></div></div><div><h4>Thinking process</h4><p><b>What:</b> overall CPI, housing CPI, food CPI and composite city pressure. <b>Why:</b> compare multiple burden dimensions at once. <b>How:</b> x/y position, size and colour encode different variables.</p></div><div><h4>Interaction & source</h4><p>The dropdown highlights one city, while hover provides exact values.</p></div></div>
+        </details>
+        <details>
+          <summary><span>09</span> Monthly Inflation Snapshot: year selector line chart</summary>
+          <div class="audit-body with-chart"><div class="audit-mini"><div id="audit9"></div></div><div><h4>Thinking process</h4><p><b>What:</b> monthly inflation across selected years. <b>Why:</b> show short-term movement that annual averages can hide. <b>How:</b> month is ordinal and inflation is encoded by y-position.</p></div><div><h4>Interaction & source</h4><p>A year dropdown keeps the chart simple while allowing comparison between years.</p></div></div>
+        </details>
+        <details>
+          <summary><span>10</span> State Cost Pressure: bubble filter chart</summary>
+          <div class="audit-body with-chart"><div class="audit-mini"><div id="audit10"></div></div><div><h4>Thinking process</h4><p><b>What:</b> food, transport and overall pressure scores by capital city. <b>Why:</b> summarise city-level stress. <b>How:</b> x/y position separates food and transport pressure, while size and colour show composite and overall pressure.</p></div><div><h4>Interaction & source</h4><p>The pressure slider filters lower-score states, making high-pressure regions easier to identify.</p></div></div>
+        </details>
+      </div>
+
+      <div class="source-note">
+        <strong>Data sources:</strong> charts use ABS CPI, ABS Wage Price Index, ABS Household Spending Indicator and RBA cash-rate data uploaded for this project. Source links are listed in <code>data/data_sources.csv</code>.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Jonathan Trystan · FIT2179 Data Visualisation 2 · Australia’s Cost of Living Crisis</p>
+    <p>Visualised with Vega-Lite. Data sources: ABS CPI, ABS WPI, ABS Household Spending Indicator, and RBA cash-rate data. Acknowledge generative AI assistance in the final Moodle description if used.</p>
+  </footer>
+
+  <script>
+  const charts = [
+    ['#chart1', 'charts/01_inflation_vs_wages.json'],
+    ['#chart2', 'charts/02_city_rent_bar.json'],
+    ['#chart3', 'charts/03_australia_city_map.json'],
+    ['#chart4', 'charts/04_category_change_lollipop.json'],
+    ['#chart5', 'charts/05_heatmap_prices.json'],
+    ['#chart6', 'charts/06_budget_donut.json'],
+    ['#chart7', 'charts/07_interest_rent_area.json'],
+    ['#chart8', 'charts/08_city_scatter.json'],
+    ['#chart9', 'charts/09_monthly_inflation_filter.json'],
+    ['#chart10', 'charts/10_state_pressure_bubble.json']
+  ];
+
+  function embedChart(target, url, actions = true) {
+    const basePath = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
+
+    vegaEmbed(target, url, {
+      actions: actions,
+      renderer: 'svg',
+      loader: { baseURL: basePath },
+      config: {
+        background: 'transparent'
+      }
+    }).catch(error => {
+      const el = document.querySelector(target);
+      if (el) {
+        el.innerHTML = `<p class="error">Chart failed to load: ${url}</p>`;
+      }
+      console.error('Vega-Lite error for', url, error);
+    });
+  }
+
+  // Main charts
+  charts.forEach(([target, url]) => {
+    embedChart(target, url, true);
+  });
+
+  // Audit charts: load only when the section is opened
+  document.querySelectorAll('#audit details').forEach((detail, index) => {
+    const auditTarget = `#audit${index + 1}`;
+    const auditUrl = charts[index][1];
+
+    function loadAuditChart() {
+      const el = document.querySelector(auditTarget);
+      if (!el || el.dataset.loaded === 'true') return;
+
+      setTimeout(() => {
+        embedChart(auditTarget, auditUrl, false);
+        el.dataset.loaded = 'true';
+      }, 150);
+    }
+
+    if (detail.open) {
+      loadAuditChart();
+    }
+
+    detail.addEventListener('toggle', () => {
+      if (detail.open) {
+        loadAuditChart();
+      }
+    });
+  });
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    document.getElementById('progress').style.width = `${(scrollTop / height) * 100}%`;
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  document.getElementById('toggleTheme').addEventListener('click', () => {
+    document.body.classList.toggle('focus-mode');
+  });
+</script>
+</body>
+</html>

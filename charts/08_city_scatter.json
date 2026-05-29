@@ -1,0 +1,113 @@
+{
+  "width": "container",
+  "height": 360,
+  "data": {
+    "url": "../data/capital_city_cpi_pressure.csv"
+  },
+  "params": [
+    {
+      "name": "cityPick08",
+      "value": "Sydney",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Adelaide",
+          "Brisbane",
+          "Canberra",
+          "Darwin",
+          "Hobart",
+          "Melbourne",
+          "Perth",
+          "Sydney"
+        ],
+        "name": "Highlight city: "
+      }
+    }
+  ],
+  "mark": {
+    "type": "circle",
+    "stroke": "white",
+    "strokeWidth": 1.5
+  },
+  "encoding": {
+    "x": {
+      "field": "all_groups_pct",
+      "type": "quantitative",
+      "title": "All groups CPI annual movement (%)"
+    },
+    "y": {
+      "field": "housing_pct",
+      "type": "quantitative",
+      "title": "Housing CPI group annual movement (%)"
+    },
+    "size": {
+      "field": "pressure_score",
+      "type": "quantitative",
+      "title": "Pressure score",
+      "scale": {
+        "range": [
+          150,
+          1200
+        ]
+      }
+    },
+    "color": {
+      "condition": {
+        "test": "datum.city == cityPick08",
+        "value": "#fb8500"
+      },
+      "value": "#2a9d8f"
+    },
+    "opacity": {
+      "condition": {
+        "test": "datum.city == cityPick08",
+        "value": 1
+      },
+      "value": 0.65
+    },
+    "tooltip": [
+      {
+        "field": "city"
+      },
+      {
+        "field": "all_groups_pct",
+        "title": "All groups CPI (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "housing_pct",
+        "title": "Housing CPI group (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "food_pct",
+        "title": "Food CPI (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "pressure_score",
+        "title": "Pressure score",
+        "format": ".1f"
+      }
+    ]
+  },
+  "title": {
+    "text": "City Burden Scatterplot",
+    "subtitle": "Compare overall inflation with housing CPI pressure; use dropdown to highlight a city",
+    "anchor": "start"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    }
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json"
+}

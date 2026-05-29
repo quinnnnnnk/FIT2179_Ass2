@@ -1,0 +1,80 @@
+{
+  "width": "container",
+  "height": 360,
+  "data": {
+    "url": "../data/rent_cash_rate.csv"
+  },
+  "params": [
+    {
+      "name": "brush07",
+      "select": {
+        "type": "interval",
+        "encodings": [
+          "x"
+        ]
+      }
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "point": true,
+    "strokeWidth": 3
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": "Date"
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Percentage (%)"
+    },
+    "color": {
+      "field": "series",
+      "type": "nominal",
+      "title": "Series"
+    },
+    "opacity": {
+      "condition": {
+        "param": "brush07",
+        "value": 1
+      },
+      "value": 0.55
+    },
+    "tooltip": [
+      {
+        "field": "date",
+        "type": "temporal"
+      },
+      {
+        "field": "series"
+      },
+      {
+        "field": "value",
+        "title": "Value (%)",
+        "format": ".2f"
+      }
+    ]
+  },
+  "title": {
+    "text": "Rent Inflation and Interest-Rate Pressure",
+    "subtitle": "Brush across the timeline to focus on a period; both series are percentage measures",
+    "anchor": "start"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    }
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json"
+}

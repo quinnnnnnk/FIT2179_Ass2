@@ -1,0 +1,109 @@
+{
+  "width": "container",
+  "height": 360,
+  "data": {
+    "url": "../data/capital_city_map_pressure.csv"
+  },
+  "params": [
+    {
+      "name": "minPressure10",
+      "value": 4,
+      "bind": {
+        "input": "range",
+        "min": 3,
+        "max": 7,
+        "step": 0.1,
+        "name": "Minimum pressure score: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.pressure_score >= minPressure10"
+    }
+  ],
+  "mark": {
+    "type": "circle",
+    "stroke": "white",
+    "strokeWidth": 1.5,
+    "opacity": 0.85
+  },
+  "encoding": {
+    "x": {
+      "field": "food_pct",
+      "type": "quantitative",
+      "title": "Food CPI annual movement (%)"
+    },
+    "y": {
+      "field": "transport_pct",
+      "type": "quantitative",
+      "title": "Transport CPI annual movement (%)"
+    },
+    "size": {
+      "field": "pressure_score",
+      "type": "quantitative",
+      "title": "Composite pressure",
+      "scale": {
+        "range": [
+          200,
+          1600
+        ]
+      }
+    },
+    "color": {
+      "field": "all_groups_pct",
+      "type": "quantitative",
+      "title": "All groups CPI (%)",
+      "scale": {
+        "scheme": "viridis"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "city"
+      },
+      {
+        "field": "state"
+      },
+      {
+        "field": "food_pct",
+        "title": "Food CPI (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "transport_pct",
+        "title": "Transport CPI (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "housing_pct",
+        "title": "Housing CPI group (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "pressure_score",
+        "title": "Pressure score",
+        "format": ".1f"
+      }
+    ]
+  },
+  "title": {
+    "text": "Capital City Cost Pressure Bubble Filter",
+    "subtitle": "Use the slider to isolate higher pressure cities across food, transport and overall CPI measures",
+    "anchor": "start"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    }
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json"
+}

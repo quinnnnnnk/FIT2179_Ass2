@@ -1,0 +1,9 @@
+city,Alcohol & tobacco,all_groups_pct,Clothing & footwear,Communication,education_pct,food_pct,"Furnishings, household equipment and services",Health,housing_pct,insurance_finance_pct,Recreation & culture,transport_pct,state,latitude,longitude,pressure_score
+Adelaide,5.3,4.6,4.9,1.5,4.2,2.3,1.4,4.1,7.0,4.1,2.9,8.3,SA,-34.9285,138.6007,5.26
+Brisbane,4.4,4.6,6.5,1.4,4.8,2.6,1.9,3.6,6.6,2.1,2.9,9.3,QLD,-27.4698,153.0251,5.04
+Canberra,4.9,4.0,4.5,1.9,5.9,2.5,2.1,3.6,5.2,1.9,1.9,7.7,ACT,-35.2809,149.13,4.26
+Darwin,4.0,4.2,3.3,1.6,3.4,2.9,1.2,2.7,5.6,3.3,3.1,9.8,NT,-12.4634,130.8456,5.16
+Hobart,7.5,5.0,4.4,1.5,3.8,4.1,1.8,3.4,7.9,4.4,2.3,7.9,TAS,-42.8821,147.3272,5.86
+Melbourne,4.3,3.9,5.8,1.5,4.8,2.8,1.1,3.9,6.0,3.6,3.2,3.5,VIC,-37.8136,144.9631,3.96
+Perth,4.8,3.9,4.6,1.4,5.3,2.7,1.2,3.5,5.5,0.7,1.6,8.8,WA,-31.9505,115.8605,4.32
+Sydney,3.5,4.2,6.6,1.6,4.7,2.9,1.0,4.4,6.4,3.3,2.0,6.9,NSW,-33.8688,151.2093,4.74

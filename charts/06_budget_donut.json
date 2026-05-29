@@ -1,0 +1,110 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 360,
+  "padding": {
+    "left": 0,
+    "right": 0,
+    "top": 35,
+    "bottom": 20
+  },
+  "data": {
+    "url": "../data/household_spending_latest.csv"
+  },
+  "params": [
+    {
+      "name": "spendHighlight06",
+      "select": {
+        "type": "point",
+        "fields": ["category"]
+      },
+      "bind": "legend"
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.monthly_pct > 0"
+    },
+    {
+      "calculate": "datum.monthly_pct",
+      "as": "positive_change"
+    }
+  ],
+  "mark": {
+    "type": "arc",
+    "innerRadius": 75,
+    "outerRadius": 135,
+    "stroke": "white",
+    "strokeWidth": 2
+  },
+  "encoding": {
+    "theta": {
+      "field": "positive_change",
+      "type": "quantitative",
+      "title": "Positive monthly movement (%)"
+    },
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "title": "Category",
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "columns": 2,
+        "labelLimit": 260,
+        "titleFontSize": 13,
+        "labelFontSize": 12
+      }
+    },
+    "opacity": {
+      "condition": {
+        "param": "spendHighlight06",
+        "value": 1
+      },
+      "value": 0.35
+    },
+    "tooltip": [
+      {
+        "field": "category",
+        "type": "nominal",
+        "title": "Category"
+      },
+      {
+        "field": "month",
+        "type": "nominal",
+        "title": "Month"
+      },
+      {
+        "field": "monthly_pct",
+        "type": "quantitative",
+        "title": "Monthly spending movement (%)",
+        "format": ".1f"
+      }
+    ]
+  },
+  "title": {
+    "text": "Household Spending Momentum",
+    "subtitle": "Positive monthly spending growth by category in the latest ABS release",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "font": "Inter",
+    "subtitleFont": "Inter",
+    "color": "#17212f",
+    "subtitleColor": "#64748b",
+    "offset": 12
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    }
+  }
+}

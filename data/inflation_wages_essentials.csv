@@ -1,0 +1,195 @@
+date,series,annual_pct
+2018-03-01,Wage Price Index,2.0
+2018-06-01,Wage Price Index,2.1
+2018-09-01,Wage Price Index,2.3
+2018-12-01,Wage Price Index,2.3
+2019-03-01,Wage Price Index,2.3
+2019-06-01,Wage Price Index,2.3
+2019-09-01,Wage Price Index,2.2
+2019-12-01,Wage Price Index,2.2
+2020-03-01,Wage Price Index,2.2
+2020-06-01,Wage Price Index,1.8
+2020-09-01,Wage Price Index,1.4
+2020-12-01,Wage Price Index,1.3
+2021-03-01,Wage Price Index,1.5
+2021-06-01,Wage Price Index,1.8
+2021-09-01,Wage Price Index,2.2
+2021-12-01,Wage Price Index,2.4
+2022-03-01,Wage Price Index,2.4
+2022-06-01,Wage Price Index,2.7
+2022-09-01,Wage Price Index,3.1
+2022-12-01,Wage Price Index,3.3
+2023-03-01,Wage Price Index,3.7
+2023-06-01,Wage Price Index,3.6
+2023-09-01,Wage Price Index,4.1
+2023-12-01,Wage Price Index,4.3
+2024-03-01,Wage Price Index,4.0
+2024-06-01,Wage Price Index,4.1
+2024-09-01,Wage Price Index,3.5
+2024-12-01,Wage Price Index,3.2
+2025-03-01,Wage Price Index,3.4
+2025-06-01,Wage Price Index,3.4
+2025-09-01,Wage Price Index,3.3
+2025-12-01,Wage Price Index,3.4
+2026-03-01,Wage Price Index,3.3
+2023-08-01,Rents,7.8
+2023-09-01,Rents,7.5
+2023-10-01,Rents,6.6
+2023-11-01,Rents,7.1
+2023-12-01,Rents,7.4
+2024-01-01,Rents,7.5
+2024-02-01,Rents,7.5
+2024-03-01,Rents,7.7
+2024-04-01,Rents,7.5
+2024-05-01,Rents,7.4
+2024-06-01,Rents,7.1
+2024-07-01,Rents,6.9
+2024-08-01,Rents,6.7
+2024-09-01,Rents,6.6
+2024-10-01,Rents,6.8
+2024-11-01,Rents,6.6
+2024-12-01,Rents,6.2
+2025-01-01,Rents,5.8
+2025-02-01,Rents,5.5
+2025-03-01,Rents,5.2
+2025-04-01,Rents,4.9
+2025-05-01,Rents,4.5
+2025-06-01,Rents,4.2
+2025-07-01,Rents,3.9
+2025-08-01,Rents,3.7
+2025-09-01,Rents,3.8
+2025-10-01,Rents,4.2
+2025-11-01,Rents,4.0
+2025-12-01,Rents,3.9
+2026-01-01,Rents,3.9
+2026-02-01,Rents,3.8
+2026-03-01,Rents,3.7
+2026-04-01,Rents,3.5
+2018-10-01,Automotive fuel,21.4
+2018-11-01,Automotive fuel,3.4
+2018-12-01,Automotive fuel,-3.7
+2019-01-01,Automotive fuel,-8.4
+2019-02-01,Automotive fuel,-4.0
+2019-03-01,Automotive fuel,2.1
+2019-04-01,Automotive fuel,2.9
+2019-05-01,Automotive fuel,0.6
+2019-06-01,Automotive fuel,-4.8
+2019-07-01,Automotive fuel,-2.6
+2019-08-01,Automotive fuel,-3.4
+2019-09-01,Automotive fuel,-5.7
+2019-10-01,Automotive fuel,-5.0
+2019-11-01,Automotive fuel,4.3
+2019-12-01,Automotive fuel,10.8
+2020-01-01,Automotive fuel,17.1
+2020-02-01,Automotive fuel,8.5
+2020-03-01,Automotive fuel,-6.5
+2020-04-01,Automotive fuel,-25.6
+2020-05-01,Automotive fuel,-26.1
+2020-06-01,Automotive fuel,-15.4
+2020-07-01,Automotive fuel,-12.7
+2020-08-01,Automotive fuel,-12.8
+2020-09-01,Automotive fuel,-14.6
+2020-10-01,Automotive fuel,-18.2
+2020-11-01,Automotive fuel,-17.3
+2020-12-01,Automotive fuel,-14.4
+2021-01-01,Automotive fuel,-12.3
+2021-02-01,Automotive fuel,-6.8
+2021-03-01,Automotive fuel,9.9
+2021-04-01,Automotive fuel,32.9
+2021-05-01,Automotive fuel,30.7
+2021-06-01,Automotive fuel,19.4
+2021-07-01,Automotive fuel,23.5
+2021-08-01,Automotive fuel,24.1
+2021-09-01,Automotive fuel,26.5
+2021-10-01,Automotive fuel,33.8
+2021-11-01,Automotive fuel,37.0
+2021-12-01,Automotive fuel,26.6
+2022-01-01,Automotive fuel,29.8
+2022-02-01,Automotive fuel,34.0
+2022-03-01,Automotive fuel,40.8
+2022-04-01,Automotive fuel,19.5
+2022-05-01,Automotive fuel,33.7
+2022-06-01,Automotive fuel,43.3
+2022-07-01,Automotive fuel,29.2
+2022-08-01,Automotive fuel,15.0
+2022-09-01,Automotive fuel,10.1
+2022-10-01,Automotive fuel,11.9
+2022-11-01,Automotive fuel,16.6
+2022-12-01,Automotive fuel,10.8
+2023-01-01,Automotive fuel,7.4
+2023-02-01,Automotive fuel,5.5
+2023-03-01,Automotive fuel,-8.2
+2023-04-01,Automotive fuel,9.5
+2023-05-01,Automotive fuel,-8.0
+2023-06-01,Automotive fuel,-10.6
+2023-07-01,Automotive fuel,-7.7
+2023-08-01,Automotive fuel,13.9
+2023-09-01,Automotive fuel,19.8
+2023-10-01,Automotive fuel,8.5
+2023-11-01,Automotive fuel,2.3
+2023-12-01,Automotive fuel,5.3
+2024-01-01,Automotive fuel,3.1
+2024-02-01,Automotive fuel,4.2
+2024-03-01,Automotive fuel,8.2
+2024-04-01,Automotive fuel,7.5
+2024-05-01,Automotive fuel,9.3
+2024-06-01,Automotive fuel,6.5
+2024-07-01,Automotive fuel,4.1
+2024-08-01,Automotive fuel,-7.6
+2024-09-01,Automotive fuel,-14.1
+2024-10-01,Automotive fuel,-11.5
+2024-11-01,Automotive fuel,-10.3
+2024-12-01,Automotive fuel,-1.4
+2025-01-01,Automotive fuel,-1.9
+2025-02-01,Automotive fuel,-5.5
+2025-03-01,Automotive fuel,-7.7
+2025-04-01,Automotive fuel,-12.0
+2025-05-01,Automotive fuel,-10.0
+2025-06-01,Automotive fuel,-7.9
+2025-07-01,Automotive fuel,-5.5
+2025-08-01,Automotive fuel,-1.7
+2025-09-01,Automotive fuel,2.8
+2025-10-01,Automotive fuel,1.9
+2025-11-01,Automotive fuel,3.5
+2025-12-01,Automotive fuel,-0.8
+2026-01-01,Automotive fuel,-2.7
+2026-02-01,Automotive fuel,-7.2
+2026-03-01,Automotive fuel,24.2
+2026-04-01,Automotive fuel,18.6
+2023-04-01,Electricity,15.1
+2023-05-01,Electricity,14.0
+2023-06-01,Electricity,10.2
+2023-07-01,Electricity,15.6
+2023-08-01,Electricity,12.6
+2023-09-01,Electricity,18.0
+2023-10-01,Electricity,10.1
+2023-11-01,Electricity,10.7
+2023-12-01,Electricity,0.4
+2024-01-01,Electricity,0.8
+2024-02-01,Electricity,0.2
+2024-03-01,Electricity,5.2
+2024-04-01,Electricity,4.2
+2024-05-01,Electricity,6.6
+2024-06-01,Electricity,7.4
+2024-07-01,Electricity,-5.1
+2024-08-01,Electricity,-17.9
+2024-09-01,Electricity,-24.1
+2024-10-01,Electricity,-35.6
+2024-11-01,Electricity,-21.5
+2024-12-01,Electricity,-17.9
+2025-01-01,Electricity,-11.4
+2025-02-01,Electricity,-13.2
+2025-03-01,Electricity,-9.6
+2025-04-01,Electricity,-6.5
+2025-05-01,Electricity,-5.9
+2025-06-01,Electricity,-6.3
+2025-07-01,Electricity,13.6
+2025-08-01,Electricity,24.6
+2025-09-01,Electricity,33.9
+2025-10-01,Electricity,37.1
+2025-11-01,Electricity,19.7
+2025-12-01,Electricity,21.5
+2026-01-01,Electricity,32.2
+2026-02-01,Electricity,37.0
+2026-03-01,Electricity,25.4
+2026-04-01,Electricity,22.5

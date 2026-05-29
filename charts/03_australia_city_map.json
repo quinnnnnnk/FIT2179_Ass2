@@ -1,0 +1,182 @@
+{
+  "width": 750,
+  "height": 455,
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/vega/vega-datasets/main/data/world-110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.id == 36"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#eef3f7",
+        "stroke": "#64748b",
+        "strokeWidth": 1.2
+      },
+      "projection": {
+        "type": "mercator",
+        "center": [
+          134,
+          -26
+        ],
+        "scale": 520,
+        "translate": [
+          375,
+          225
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "../data/capital_city_map_pressure.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "stroke": "white",
+        "strokeWidth": 2,
+        "opacity": 0.9
+      },
+      "projection": {
+        "type": "mercator",
+        "center": [
+          134,
+          -26
+        ],
+        "scale": 520,
+        "translate": [
+          375,
+          225
+        ]
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "pressure_score",
+          "type": "quantitative",
+          "title": "Composite pressure",
+          "scale": {
+            "range": [
+              200,
+              1400
+            ]
+          }
+        },
+        "color": {
+          "field": "all_groups_pct",
+          "type": "quantitative",
+          "title": "All groups CPI (%)",
+          "scale": {
+            "scheme": "yelloworangered"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "city",
+            "title": "Capital city"
+          },
+          {
+            "field": "state",
+            "title": "State/Territory"
+          },
+          {
+            "field": "all_groups_pct",
+            "title": "All groups CPI (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "housing_pct",
+            "title": "Housing CPI group (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "food_pct",
+            "title": "Food CPI group (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "transport_pct",
+            "title": "Transport CPI group (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "pressure_score",
+            "title": "Pressure score",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "../data/capital_city_map_pressure.csv"
+      },
+      "mark": {
+        "type": "text",
+        "dy": -18,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#17212f"
+      },
+      "projection": {
+        "type": "mercator",
+        "center": [
+          134,
+          -26
+        ],
+        "scale": 520,
+        "translate": [
+          375,
+          225
+        ]
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "city",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+  "title": {
+    "text": "Cost Pressure Across Australian Capital Cities",
+    "subtitle": "Bubble size = composite CPI pressure; colour = all-groups annual CPI movement; hover for details",
+    "anchor": "start"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    }
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json"
+}
