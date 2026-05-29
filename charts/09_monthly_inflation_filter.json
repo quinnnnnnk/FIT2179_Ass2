@@ -2,7 +2,7 @@
   "width": "container",
   "height": 360,
   "data": {
-    "url": "../data/monthly_essential_inflation.csv"
+    "url": "data/monthly_essential_inflation.csv"
   },
   "params": [
     {
