@@ -2,7 +2,7 @@
   "width": "container",
   "height": 360,
   "data": {
-    "url": "../data/capital_city_map_pressure.csv"
+    "url": "data/capital_city_map_pressure.csv"
   },
   "params": [
     {
