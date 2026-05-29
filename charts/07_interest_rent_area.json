@@ -2,7 +2,7 @@
   "width": "container",
   "height": 360,
   "data": {
-    "url": "../data/rent_cash_rate.csv"
+    "url": "data/rent_cash_rate.csv"
   },
   "params": [
     {
