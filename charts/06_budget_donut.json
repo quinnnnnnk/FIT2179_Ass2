@@ -9,7 +9,7 @@
     "bottom": 20
   },
   "data": {
-    "url": "../data/household_spending_latest.csv"
+    "url": "data/household_spending_latest.csv"
   },
   "params": [
     {
