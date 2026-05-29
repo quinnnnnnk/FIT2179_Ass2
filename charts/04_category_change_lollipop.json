@@ -2,7 +2,7 @@
   "width": "container",
   "height": 380,
   "data": {
-    "url": "/data/current_cpi_categories.csv"
+    "url": "data/current_cpi_categories.csv"
   },
   "params": [
     {
