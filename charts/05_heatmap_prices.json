@@ -2,7 +2,7 @@
   "width": "container",
   "height": 390,
   "data": {
-    "url": "../data/city_category_heatmap.csv"
+    "url": "data/city_category_heatmap.csv"
   },
   "params": [
     {
