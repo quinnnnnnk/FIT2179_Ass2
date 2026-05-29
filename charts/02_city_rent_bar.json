@@ -2,7 +2,7 @@
   "width": "container",
   "height": 340,
   "data": {
-    "url": "../data/capital_city_cpi_pressure.csv"
+    "url": "/data/capital_city_cpi_pressure.csv"
   },
   "params": [
     {
