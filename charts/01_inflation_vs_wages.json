@@ -2,7 +2,7 @@
   "width": "container",
   "height": 380,
   "data": {
-    "url": "/data/inflation_wages_essentials.csv"
+    "url": "data/inflation_wages_essentials.csv"
   },
   "params": [
     {
