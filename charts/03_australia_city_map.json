@@ -123,7 +123,7 @@
     },
     {
       "data": {
-        "url": "../data/capital_city_map_pressure.csv"
+        "url": "data/capital_city_map_pressure.csv"
       },
       "mark": {
         "type": "text",
